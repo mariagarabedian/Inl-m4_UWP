@@ -22,7 +22,7 @@ namespace SharedUwpLibraries.Services
 
             _client = new HttpClient();
 
-                var response = await _client.GetStringAsync("http://api.openweathermap.org/data/2.5/weather?q=Kumla,se&APPID=340a1c7e1eb2c2fac4b365398b20c7e8");
+                var response = await _client.GetStringAsync("http://api.openweathermap.org/data/2.5/weather?q=Kumla,se&APPID=");// tog bort nyckel
             //var data = JsonConvert.DeserializeObject<TemperatureModel.Temperature>(await response.Content.ReadAsStringAsync());
             var data = JsonConvert.DeserializeObject<TemperatureModel.Temperature>(response);
                 var weather = new WeatherModel
